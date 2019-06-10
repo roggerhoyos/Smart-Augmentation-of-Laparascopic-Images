@@ -1,0 +1,10 @@
+﻿  model_loading.cpp
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(349): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(607): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(608): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(612): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(613): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(615): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(616): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\documents\opengl\sals\sals\model_loading.cpp(625): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  SALS.vcxproj -> C:\Users\MAC\Documents\OpenGL\SALS\Debug\SALS.exe
