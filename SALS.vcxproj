@@ -29,6 +29,9 @@
     <ClCompile Include="model_loading.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="fragment_changeColor_shader.glsl" />
+    <None Include="fragment_depth_shader.glsl" />
+    <None Include="fragment_varsilhouette_shader.glsl" />
     <None Include="fragment_vesselModel_shader.glsl" />
     <None Include="fragment_vesselTexture_shader.glsl" />
     <None Include="framebuffer_zebra_stripe_fragment.glsl" />
@@ -37,6 +40,9 @@
     <None Include="framebuffers_silhouette_vertex.glsl" />
     <None Include="screen_shader_fragment.glsl" />
     <None Include="screen_shader_vertex.glsl" />
+    <None Include="vertex_changeColor_shader.glsl" />
+    <None Include="vertex_depth_shader.glsl" />
+    <None Include="vertex_varsilhouette_shader.glsl" />
     <None Include="vertex_vesselModel_shader.glsl" />
     <None Include="vertex_vesselTexture_shader.glsl" />
   </ItemGroup>

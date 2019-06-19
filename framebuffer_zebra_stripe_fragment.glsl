@@ -1,5 +1,10 @@
 #version 330 core
 
+// Do not compare texture().rgb < vec3() - error you can only compare one element at time
+
+
+// 3 different methods: Pulse, Fraction, Step 
+
 out vec4 FragColor;
 
 in vec2 TexCoords;
@@ -8,17 +13,49 @@ in float Depth;
 
 uniform sampler2D vesselTexture;
 
-uniform int multiplicationFactor = 1;
+uniform float multiplicationFactor = 0.5;
+
+ float width;
+
+ //Frustrum: 0.1 - 100 
+
+void main() {
+   
+      if (Depth <=30.0 )
+	            width = 0.7;
+	     else if( Depth>30.0 &&  Depth<=35.0)
+	            width = 0.35;
+		  else if ( Depth>35.0 &&  Depth<=40.0)
+		        width = 0.1;
+		  else if (Depth >40)
+		        width = 0.0;
 
 
-void main()
-{      
-     if(fract(Pos.x * multiplicationFactor)<0.5)
-          FragColor= vec4(1.f,1.f,1.f,1.f); //White Stripe 
-  		  else 
-  		     FragColor = vec4(0.f,0.f,0.f,1.f);  //Black Stripe
-}
+		width = Depth * 1.0 / 60;
+		width = min(1.0f, width);
 
+		        
+        if(fract(Pos.y * multiplicationFactor)<width && width != 0.0)
+              FragColor= vec4(1.f,1.f,1.f,1.f);
+ 		  else if(fract(Pos.y * multiplicationFactor)>width && width != 0.0)
+  		      FragColor = vec4(0.f,0.f,0.f,1.f);
+			else if (width == 0.0)
+			   FragColor =  vec4(0.f,0.f,0.f,0.f);		  
+}	    
+	     
+		 
+	  
+  
+   
+//Only Uniform Stripes
+//void main()
+//{    
+//  
+//     if(fract(Pos.x * multiplicationFactor)<0.5)
+//          FragColor= vec4(1.f,1.f,1.f,1.f);
+//  		  else 
+//  		     FragColor = vec4(0.f,0.f,0.f,1.f);      
+//}
 
 
 
@@ -80,6 +117,15 @@ void main()
 //		 else
 //		   FragColor = vec4(0.f,0.f,0.f,1.f);
 //  }
+
+
+
+
+//vec4 vakue = texture(franebufferTexture, vec2(0, TexCoords.y))
+//if(value.r > 0.5f)	{
+// fancy logic
+//} else {
+// FragColor = 0,0,0
 
 
 

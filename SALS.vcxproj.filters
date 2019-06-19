@@ -67,5 +67,23 @@
     <None Include="screen_shader_fragment.glsl">
       <Filter>Resource Files\Source Files</Filter>
     </None>
+    <None Include="vertex_depth_shader.glsl">
+      <Filter>Resource Files\Source Files</Filter>
+    </None>
+    <None Include="fragment_depth_shader.glsl">
+      <Filter>Resource Files\Source Files</Filter>
+    </None>
+    <None Include="vertex_varsilhouette_shader.glsl">
+      <Filter>Resource Files\Source Files</Filter>
+    </None>
+    <None Include="fragment_varsilhouette_shader.glsl">
+      <Filter>Resource Files\Source Files</Filter>
+    </None>
+    <None Include="vertex_changeColor_shader.glsl">
+      <Filter>Resource Files\Source Files</Filter>
+    </None>
+    <None Include="fragment_changeColor_shader.glsl">
+      <Filter>Resource Files\Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

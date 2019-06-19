@@ -1,15 +1,26 @@
 #version 330 core
 
+//TextCoord 2 Vector
+//
+
 out vec4 FragColor;
 
 in vec2 TexCoords;
 
 uniform sampler2D silhouetteTexture;
+ 
 
 void main()
 {
-   
-  const float offset = 1.0 / 100.0;  
+
+
+   //vec3 c = texture(t, TexCoords)
+   //vec3 c = texture(t, vec2(TexCoords.r + 9)
+  
+  //FragColor = texture(screenTexture, TexCoords);
+               
+  
+   const   float offset = 1.0 / 300.0;  
 
     vec2 offsets[9] = vec2[](
         vec2(-offset,  offset), // top-left
@@ -23,14 +34,18 @@ void main()
         vec2( offset, -offset)  // bottom-right    
     );
 
+ 
 	//Edge Detector
     float kernel[9] = float[](
          1,  1,  1,
          1, -8,  1,
          1,  1,  1
     );
-    
+   
+
     vec3 sampleTex[9];
+
+
     for(int i = 0; i < 9; i++)
     {
         sampleTex[i] = vec3(texture(silhouetteTexture, TexCoords.st + offsets[i])); // x=s, y=t. 
@@ -41,4 +56,8 @@ void main()
     
     FragColor = vec4(col, 1.0);  //Do it  for every pixel
   
+
 } 
+
+
+
